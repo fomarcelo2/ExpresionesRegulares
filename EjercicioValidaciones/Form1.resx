@@ -120,4 +120,13 @@
   <metadata name="errorM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Recuerde que la contraseña debe contener:
+
+* La contraseña debe tener entre 8 y 16 caracteres
+* Al menos un dígito
+* Al menos una minúscula 
+* Al menos una mayúscula.
+* Puede tener otros símbolos.</value>
+  </data>
 </root>

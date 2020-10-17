@@ -21,15 +21,17 @@ namespace EjercicioValidaciones
         private void button1_Click(object sender, EventArgs e)
         {
             if (!validar.Vacio(txtNombre, errorM, "El nombre no puede estar vacío"))
-                if(validar.TipoTexto(txtNombre, errorM, "Debe de ingresar texto"))
+                if(!validar.TipoTexto(txtNombre, errorM, "Debe de ingresar texto"))
                     if (!validar.Vacio(txtCodigo, errorM, "El código no puede estar vacío"))
-                        if(validar.TipoNumero(txtCodigo, errorM, "Debe de ingresar numeros"))
+                        if(!validar.TipoNumero(txtCodigo, errorM, "Debe de ingresar numeros"))
                              if (!validar.Vacio(txtCorreo, errorM, "El correo no puede estar vacío"))
-
-                             {
-                                  lblSalida.Text = "Todos los campos estan diligenciados";
-                                  LimpiarCajas();
-                             }
+                                if (validar.TipoCorreo(txtCorreo, errorM, "El formato del correo no es válido."))
+                                    if (!validar.Vacio(txtClave, errorM, "La contraseña no puede estar vacía"))
+                                        if (validar.ValidarClave(txtClave, errorM, "La contraseña no cumple con las condiciones"))
+                                        {
+                                            lblSalida.Text = "Todos los campos estan diligenciados";
+                                            LimpiarCajas();
+                                         }
 
         }
 
@@ -38,6 +40,7 @@ namespace EjercicioValidaciones
             txtNombre.Clear();
             txtCodigo.Clear();
             txtCorreo.Clear();
+            txtClave.Clear();
         }
     }
 }
