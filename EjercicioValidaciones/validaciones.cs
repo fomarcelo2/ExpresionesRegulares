@@ -20,8 +20,9 @@ namespace EjercicioValidaciones
                 return true;
             }
             else
-            {
-                error.Clear();
+            { 
+                error.Clear(); 
+
                 return false;
             }
         }
